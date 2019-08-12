@@ -7,79 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="dist/theme.min.css">
+    <link rel="stylesheet" href="dist/RegisterStyle.css">
+    <style type="text/css" id="material-custom"></style>
+    <style type="text/css" id="custom"></style>
 </head>
-<style>
-    .primary {
-        background-color: #007bff !important;
-        color: white !important;
-    }
-    
-    .danger {
-        background-color: #F44336 !important;
-        color: white !important;
-    }
-    
-    .success {
-        background-color: #28a745 !important;
-        color: white !important;
-    }
-    
-    .info {
-        background-color: #17a2b8 !important;
-        color: white !important;
-    }
-    
-    .row-wrap {
-        margin: 20px 40px;
-    }
-    
-    .collection {
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
-        overflow: visible;
-    }
-    
-    .dropdown-content {
-        border-radius: 10px;
-        width: auto !important;
-    }
-    
-    form .row {
-        margin-bottom: 0px;
-    }
-    
-    body {
-        height: inherit;
-    }
-    
-    .register-center {
-        float: unset !important;
-        padding-top: 40px !important;
-        margin-right: auto;
-        height: -webkit-fill-available;
-    }
-    
-    .no-margin {
-        margin: 0px;
-    }
-    
-    .submit-margin {
-        margin-top: 20px;
-    }
-    
-    .btn-block {
-        width: 70%
-    }
-    
-    .collection.with-header .collection-item {
-        padding-right: 30px;
-    }
-    
-    .register-form .input-field {
-        margin-bottom: 0px;
-    }
-</style>
-<style type="text/css" id="material-custom"></style>
-<style type="text/css" id="custom"></style>
 
 <body>
     <div class="row row-wrap">
@@ -180,76 +111,6 @@
 <script src="dist/app.min.js"></script>
 <script src="dist/app2.min.js"></script>
 <script src="dist/app3.min.js"></script>
-<script>
-    var mycolour = {};
-    // mycolour['blueish'] = '#107896';
-    // mycolour['lightblueish'] = '#32CBF1';
-    mycolour['forestgreen'] = '#003300';
-    mycolour['lightforestgreen'] = '#66b266';
-    mycolour['midnightblue'] = '#191970';
-    mycolour['lightmidnightblue'] = '#6464DC';
-    mycolour['tealish'] = '#006D5B';
-    mycolour['lighttealish'] = '#00C9A8';
-    mycolour['blood'] = '#800020';
-    mycolour['lightblood'] = '#FF668D';
-    mycolour['girl'] = '#FF033E';
-    mycolour['lightgirl'] = '#FF5F84';
-    mycolour['lavender'] = '#2e0b34';
-    mycolour['lightlavender'] = '#b967c7';
-    var mybg = {};
-    // mybg['blueish'] = 'https://images.unsplash.com/photo-1549490316-686f9b5d359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    mybg['forestgreen'] = 'https://images.unsplash.com/photo-1473081556163-2a17de81fc97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    mybg['midnightblue'] = 'https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    mybg['tealish'] = 'https://images.unsplash.com/photo-1501408459713-977c880160ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    mybg['blood'] = 'https://images.unsplash.com/photo-1520624598504-ed830bd895d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    mybg['girl'] = 'https://images.unsplash.com/photo-1503455637927-730bce8583c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    mybg['lavender'] = 'https://images.unsplash.com/photo-1477093782505-e10aaeb27c6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-    $(document).ready(function() {
-        var selectedcolour = 'lavender';
-        var colour = mycolour[selectedcolour];
-        var lightcolour = mycolour['light' + selectedcolour];
-        var bgimage = mybg[selectedcolour];
-        $('.collapsible').collapsible();
-        $(".dropdown-trigger").dropdown();
-        $('.datepicker').datepicker();
-        $('select').formSelect();
-        $('body').css({
-            'background-color': '#f5f5f5'
-        });
-        themechanger(selectedcolour);
-
-        $('select.theme').on('change', function() {
-            themechanger($(this).val());
-            // console.log($(this).val());
-        });
-
-        function themechanger(selectedcolour) {
-            colour = mycolour[selectedcolour];
-            lightcolour = mycolour['light' + selectedcolour];
-            bgimage = mybg[selectedcolour];
-            $('.theme-colour').css({
-                'background-color': colour,
-                'color': 'white'
-            });
-            $('.theme-colour.gradient').css({
-                'background': '-webkit-linear-gradient(bottom, ' + colour + ' 0%, ' + lightcolour + ' 100%)',
-                'color': 'white'
-            });
-            $('.theme-colour.light-colour').css({
-                'background-color': lightcolour,
-                'color': 'white'
-            });
-            $('.theme-text-colour').css({
-                'color': colour
-            });
-            $('.subheader').css({
-                'color': 'grey'
-            });
-            // $('#page').html(".pagination li a {color:#444 !important;}a.page-link{background-color:inherit !important;}.pagination li.active{background-color:" + colour + " !important;}.pagination li.active a{color:white !important;}.pagination li.disabled a {cursor: default;color: #999 !important;}");
-            $('#material-custom').html("input:not([type]):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {border-bottom: 1px solid " + colour + ";-webkit-box-shadow: 0 1px 0 0 " + colour + ";box-shadow: 0 1px 0 0 " + colour + ";}[type=checkbox]:checked+span:not(.lever):before {    border-right: 2px solid " + colour + ";border-bottom: 2px solid " + colour + ";}input:not([type]):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {color: " + colour + ";}.input-field.col .prefix~.validate~label, .input-field.col .prefix~label {width: max-content;}.input-field .prefix.active{color:" + colour + "}.select-dropdown li>a,.select-dropdown li>span{color:" + colour + "}.select-wrapper input.select-dropdown:focus {border-bottom: 1px solid " + colour + ";}");
-            $('#custom').html("body {background-image: url('" + bgimage + "'); background-size: cover;}");
-        }
-    });
-</script>
+<script src="dist/registerplugin.js"></script>
 
 </html>
