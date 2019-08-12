@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dist/theme.min.css">
+
+    <style>
+        .primary {
+            background-color: #007bff !important;
+            color: white !important;
+        }
+        
+        .danger {
+            background-color: #F44336 !important;
+            color: white !important;
+        }
+        
+        .success {
+            background-color: #28a745 !important;
+            color: white !important;
+        }
+        
+        .info {
+            background-color: #17a2b8 !important;
+            color: white !important;
+        }
+        
+        .card {
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
+        }
+        
+        .row-wrap {
+            margin: 20px 40px;
+        }
+        
+        .datatable-wrap {
+            margin: 50px;
+        }
+        
+        .task-wrap {
+            margin: 0px;
+        }
+        
+        .progress-wrap {
+            margin: 10px;
+        }
+        
+        nav .sidenav-trigger {
+            height: inherit;
+            margin: 0px;
+        }
+        
+        nav .setting-trigger {
+            margin: 0px;
+        }
+        
+        .country img {
+            height: 30px;
+            width: auto;
+            vertical-align: middle;
+        }
+        
+        .dropdown-content {
+            border-radius: 10px;
+            width: auto !important;
+        }
+        
+        #dropdown1.dropdown-content,
+        #dropdown2.dropdown-content {
+            top: 0px !important;
+            margin-top: 65px;
+        }
+        
+        .user-view {
+            margin-bottom: 1px !important;
+            border-bottom: 1px solid white;
+        }
+        
+        .card.profile {
+            /* max-height: 500px; */
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.8em;
+            background-color: white;
+            /* color: purple; */
+        }
+        
+        .profile .card-image,
+        .product .card-image {
+            max-height: 180px !important;
+        }
+        
+        .profile,
+        .product {
+            height: inherit;
+        }
+        
+        .card-title {
+            font-size: 30px !important;
+            font-weight: 400 !important;
+        }
+        
+        .card-image img {
+            height: -webkit-fill-available;
+        }
+        
+        .card-content .material-icons,
+        .card-reveal .material-icons {
+            vertical-align: sub;
+        }
+        
+        .progress-text {
+            font-size: 20px;
+        }
+        
+        .task-text {
+            line-height: inherit !important;
+            font-size: 20px !important;
+        }
+        
+        .collection {
+            /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2); */
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
+        }
+        
+        .status-card {
+            max-height: 200px;
+            min-height: 170px;
+        }
+        
+        .status-card-text {
+            font-size: 1em;
+        }
+        
+        .status-card-number {
+            font-size: 1.8em;
+            font-weight: 500;
+            letter-spacing: .05em;
+        }
+        
+        .status-card .card-content {
+            text-align: center;
+            line-height: 2.1em;
+            padding: 12px 24px;
+        }
+        
+        .status-card .card-action {
+            background-color: rgba(0, 0, 0, .2);
+            max-height: 60px;
+        }
+        
+        .status-card-title {
+            font-size: 1.3em;
+        }
+        
+        .status-card-label {
+            margin: 0px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .product ul.card-action-buttons {
+            margin: -30px 10px -6px 0px;
+            text-align: right;
+        }
+        
+        .product ul.card-action-buttons li {
+            display: inline-block;
+            padding-left: 5px;
+        }
+        
+        .progress {
+            background-color: #bbbbbb;
+            height: 5px;
+            border-radius: 10px;
+        }
+        
+        .badge {
+            padding: 0px 15px !important;
+            border-radius: 10px;
+        }
+        
+        .btn-bigfloat {
+            width: 65px !important;
+            height: 65px !important;
+            font-weight: 600;
+            font-size: 1.0rem;
+            line-height: 65px;
+            margin: 10px;
+            position: absolute;
+            top: 0;
+            letter-spacing: 0;
+        }
+        
+        form .row {
+            margin-bottom: 0px;
+        }
+        
+        .no-margin {
+            margin: 0px;
+        }
+        /* 
+            Loading Css
+         */
+        
+        .preloader-background {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+            position: fixed;
+            z-index: 10000000;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        /* #themechooser button {
+            padding: 0px;
+            height: 70px;
+            width: 100%;
+            margin-bottom: 10px;
+        } */
+        
+        .sidenav .collapsible-header {
+            background-color: transparent !important;
+        }
+        
+        .sidenav *:not(.divider) {
+            background-color: transparent;
+            color: white;
+        }
+        
+        .sidenav li.active {
+            background-color: rgba(0, 0, 0, .6);
+        }
+        
+        input[type=checkbox]:checked+span.task-text {
+            text-decoration-line: line-through;
+        }
+        
+        .carousel .indicators {
+            background-color: currentColor;
+        }
+        
+        .carousel-item img {
+            height: inherit;
+        }
+        
+        .carousel-wrap {
+            height: 500px !important;
+        }
+        
+        .search-field {
+            border: 1px solid white !important;
+            border-radius: 10px !important;
+            padding: 0px 0px 0px 10px !important;
+            width: -webkit-fill-available !important;
+            height: 32px !important;
+            background-color: white !important;
+        }
+        
+        .search-wrap {
+            margin: 0px;
+        }
+        
+        input::placeholder {
+            color: rgb(98, 98, 98);
+        }
+        
+        .modal {
+            max-height: max-content;
+            width: 33%;
+            background-color: rgba(0, 0, 0, .1);
+        }
+        
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, .8) !important;
+            opacity: 1 !important;
+        }
+        
+        .message {
+            padding-left: 20px !important;
+            background-image: url('https://images.unsplash.com/photo-1551001626-86e913f8baf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60');
+            background-size: cover;
+        }
+        
+        .message .row {
+            margin: 10px 20px;
+        }
+        
+        .message-box {
+            border-radius: 10px;
+            -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
+        }
+        
+        .online-icon {
+            vertical-align: middle;
+        }
+    </style>
+
+    <style type="text/css" id="page"></style>
+    <style type="text/css" id="material-custom"></style>
+    <style type="text/css" id="custom"></style>
+</head>
+
+<body>
+
+    <!-- preloader start -->
+
+    <div class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- preloader end -->
+
+    <!-- navbar start -->
+
+    <div class="navbar-fixed">
+        <nav class="theme-colour gradient">
+            <div class="nav-wrapper">
+                <ul>
+                    <li>
+                        <button data-target="mobile-demo" class="sidenav-trigger btn-large btn-flat waves-effect waves-light theme-colour gradient white-text"><i class="material-icons">menu</i></button>
+                    </li>
+                </ul>
+
+                <a href="#!" class="brand-logo theme-colour gradient"><span style="letter-spacing:-7px;">M</span>Drawn</a>
+
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <div class="row search-wrap">
+                            <div class="col s12 ">
+
+                                <div class="input-field ">
+                                    <!-- <i class="material-icons prefix search-icon">search</i> -->
+                                    <input type="text" placeholder="search" class="autocomplete search-field theme-text-colour">
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="country">
+                        <a class="dropdown-trigger theme-colour gradient" href="#!" data-target="dropdown1"><img src="https://cdn4.iconfinder.com/data/icons/flag_set/128/in.png" alt="" srcset=""></a>
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li>
+                                <a href="#!" class="theme-colour"><img src="https://cdn4.iconfinder.com/data/icons/flag_set/128/ca.png" alt="" srcset=""> canada</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="theme-colour"><img src="https://cdn4.iconfinder.com/data/icons/flag_set/128/cn.png" alt="" srcset=""> china</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="theme-colour"><img src="https://cdn4.iconfinder.com/data/icons/flag_set/128/au.png" alt="" srcset=""> australia</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-trigger theme-colour gradient" href="#!" data-target="dropdown2"><i class="material-icons">notifications</i></a>
+                        <ul id="dropdown2" class="dropdown-content">
+                            <li>
+                                <a href="#!" class="theme-colour">NOTIFICATIONS
+                                        <span class="new badge theme-colour gradient">
+                                            3
+                                        </span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#!" class="theme-colour"><i class="material-icons">date_range</i>appointment</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="theme-colour"><i class="material-icons">local_grocery_store</i>new order</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="theme-colour"><i class="material-icons">trending_up</i>report generated</a>
+                            </li>
+                        </ul>
+                        <!-- <a href="sass.html"><i class="material-icons">notifications</i></a> -->
+                    </li>
+                    <li><a href="#!" class="theme-colour gradient"><i class="material-icons">markunread</i></a></li>
+                    <li>
+                        <a href="#!" data-target="settings-demo" class="sidenav-trigger show-on-medium-and-up setting-trigger theme-colour gradient"><i class="material-icons">settings</i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <!-- navbar end -->
+
+    <!-- login modal start -->
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <!-- <h4>Modal Header</h4>
+            <p>A bunch of text</p> -->
+            <ul class="collection with-header theme-text-colour">
+                <li class="collection-header theme-colour gradient">
+                    <h4>Change Password</h4>
+                </li>
+                <li class="collection-item">
+                    <div class="row">
+                        <form class="col s12">
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">lock_open</i>
+                                    <input id="old_password" type="text" value="xyz123+" disabled>
+                                    <label for="old_password">Old Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input id="new_password" type="password" class="validate">
+                                    <label for="new_password">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 input-field left">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span>Remember me</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4 offset-s8">
+                                    <button class="btn waves-effect waves-light theme-colour gradient modal-close" type="button" name="action">Submit
+                                        </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div> -->
+    </div>
+    <!-- login modal end -->
+
+    <!-- settings start -->
+
+    <ul class="sidenav sidenav1" id="settings-demo">
+        <li><a class="subheader ">Subheader</a></li>
+        <li><a class="waves-effect waves-light" href="#!">Link With Waves</a></li>
+        <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Change Password</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header waves-effect waves-light"><i class="material-icons">arrow_drop_down</i>Themes</div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!" colour="forestgreen" class="waves-effect waves-light">Forest</a></li>
+                            <li><a href="#!" colour="midnightblue" class="waves-effect waves-light">Midnight</a></li>
+                            <li><a href="#!" colour="tealish" class="waves-effect waves-light">tealish</a></li>
+                            <li><a href="#!" colour="blood" class="waves-effect waves-light">Blood</a></li>
+                            <li><a href="#!" colour="girl" class="waves-effect waves-light">Girl</a></li>
+                            <li><a href="#!" colour="lavender" class="waves-effect waves-light">Lavender</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <!-- <li>
+            <div class="row " id="themechooser">
+                <div class="col s12 m12 l12 center"><button class="btn btn-block waves-effect waves-light" style="background-color: #228B22 !important;" colour="forestgreen">forest</button></div>
+                <div class="col s12 m12 l12 center"><button class="btn btn-block waves-effect waves-light circle" style="background-color: #191970 !important;" colour="midnightblue">midnight</button></div>
+                <div class="col s12 m12 l12 center"><button class="btn btn-block waves-effect waves-light circle" style="background-color: #006D5B !important;" colour="tealish">tealish</button></div>
+             <div class="col s4 m4 l4"><button class="btn btn-block waves-effect waves-light circle" style="background-color: #107896 !important;" colour="blueish"></button></div> 
+                <div class="col s12 m12 l12 center"><button class="btn btn-block waves-effect waves-light circle" style="background-color: #800020 !important;" colour="blood">blood</button></div>
+                <div class="col s12 m12 l12 center"><button class="btn btn-block waves-effect waves-light circle" style="background-color: #FF033E !important;" colour="girl">girl</button></div>
+                <div class="col s12 m12 l12 center"><button class="btn btn-block waves-effect waves-light circle" style="background-color: #3e0f46 !important;" colour="lavender">lavender</button></div>
+
+
+                <div class="col s12 m6 l6 center"><button class="btn btn-block waves-effect waves-light" style="background-color: #228B22 !important;" colour="forestgreen"><img src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></button></div>
+            </div>
+        </li> -->
+    </ul>
+
+    <!-- settings end -->
+
+    <!-- <a class="btn-floating btn-large waves-effect waves-light red"></a> -->
+
+    <!-- sidenav start -->
+
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <!-- <img src="https://images.unsplash.com/photo-1532009877282-3340270e0529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"> -->
+                </div>
+                <a href="#user"><img class="circle" src="https://images.unsplash.com/photo-1551930139-1deb64d83adc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"></a>
+                <a href="#name"><span class="white-text name"></span><i class="material-icons online-icon green-text">fiber_manual_record</i>John Doe</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="row search-wrap">
+                <div class="col s12 ">
+
+                    <div class="input-field ">
+                        <!-- <i class="material-icons prefix search-icon">search</i> -->
+                        <input type="text" placeholder="search" class="autocomplete search-field theme-text-colour">
+                    </div>
+                </div>
+
+            </div>
+        </li>
+
+        <li><a href="#!">Plain Sidebar Link</a></li>
+
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Pages</div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="login.html">Login Page</a></li>
+                            <li><a href="register.html">Register Page</a></li>
+                            <!-- <li><a href="#!">Forgot Password Page</a></li> -->
+                            <!-- <li><a href="#!">Fourth</a></li> -->
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect waves-light" href="#!">Link With Waves</a></li>
+    </ul>
+
+    <!-- sidenav end -->
+
+    <!-- content start -->
+    <div class="row-wrap">
+        <div class="row">
+
+            <!-- chartcard start -->
+
+            <div class="col s12 m12 l7 xl7">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="chartdiv"></div>
+                        <a class="btn-floating activator btn-large halfway-fab waves-effect waves-light theme-colour gradient"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title theme-text-colour">Pie chart<i class="material-icons right">close</i></span>
+                        <div class="chartdiv2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- chartcard end -->
+
+            <!-- mytask start -->
+
+            <div class="col s12 m12 l5 xl5">
+                <ul class="collection with-header">
+                    <li class="collection-header theme-colour gradient">
+                        <h4>Tasks</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row task-wrap">
+                            <div class="col s12">
+                                <label for="task1">
+                        <input type="checkbox" id="task1">
+                            <span class="theme-text-colour task-text">Call John</span>
+                            <a href="#!" class="secondary-content white">                                    
+                                <span class="badge right pink-text">today</span>
+                                </a>
+                        </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row task-wrap">
+                            <div class="col s12">
+                                <label for="task2">
+                             <input type="checkbox" id="task2" checked>
+                                <span class="theme-text-colour task-text">Work on template</span>
+                                <a href="#!" class="secondary-content white">
+                                        <span class="badge right pink-text">yesterday</span>
+                                    </a>
+                        </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row task-wrap">
+                            <div class="col s12">
+                                <label for="task3">
+                                <input type="checkbox" id="task3">
+                                   <span class="theme-text-colour task-text">Check mails</span>
+                                   <a href="#!" class="secondary-content white">
+                                       <span class="badge right pink-text">yesterday</span>
+                                   </a>
+                            </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row task-wrap">
+                            <div class="col s12">
+                                <label for="task4">
+                                    <input type="checkbox" id="task4">
+                                       <span class="theme-text-colour task-text">presentation day</span>
+                                       <a href="#!" class="secondary-content white">
+                                            <span class="badge right pink-text">wednesday</span>
+                                        </a>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row task-wrap">
+                            <div class="col s12">
+                                <label for="task5">
+                                        <input type="checkbox" id="task5">
+                                           <span class="theme-text-colour task-text">Meeting with developer</span>
+                                           <a href="#!" class="secondary-content white">
+                                                <span class="badge right pink-text">monday</span>
+                                            </a>
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row task-wrap">
+                            <div class="col s12">
+                                <label for="task6">
+                                        <input type="checkbox" id="task6">
+                                           <span class="theme-text-colour task-text">picnic day</span>
+                                           <a href="#!" class="secondary-content white">
+                                                <span class="badge right pink-text">sunday</span>
+                                            </a>
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- mytask end -->
+
+
+
+        </div>
+
+        <!-- statuscard start -->
+
+        <div class="row">
+            <div class="col s12 m3 l3 xl3">
+                <div class="card status-card primary darken-1">
+                    <div class="card-content white-text">
+                        <span class="status-card-title"><i class="material-icons">group_add</i> New Clients</span>
+                        <p class="status-card-number">456</p>
+                        <p class="status-card-text"><i class="material-icons">keyboard_arrow_up</i> 20% form last week</p>
+                    </div>
+                    <div class="card-action darken-3">
+                        <p class="status-card-label">Primary</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 l3 xl3">
+                <div class="card status-card success darken-1">
+                    <div class="card-content white-text">
+                        <span class="status-card-title"><i class="material-icons">trending_up</i> Today Profit</span>
+                        <p class="status-card-number">₹5870.53</p>
+                        <p class="status-card-text"><i class="material-icons">keyboard_arrow_up</i> 12% from yesterday</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="status-card-label">Success</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 l3 xl3">
+                <div class="card status-card danger darken-1">
+                    <div class="card-content white-text">
+                        <span class="status-card-title"><i class="material-icons">insert_drive_file</i> Invoices</span>
+                        <p class="status-card-number">620</p>
+                        <p class="status-card-text"><i class="material-icons">keyboard_arrow_down</i> 10% from yesterday</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="status-card-label">Danger</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 l3 xl3">
+                <div class="card status-card info darken-1">
+                    <div class="card-content white-text">
+                        <span class="status-card-title"><i class="material-icons">attach_money</i>Total Sales</span>
+                        <p class="status-card-number">$83560</p>
+                        <p class="status-card-text"><i class="material-icons">keyboard_arrow_up</i> 45% from last month</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="status-card-label">Info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- statuscard end -->
+        <div class="row">
+            <!-- profilecard start -->
+            <div class="col s12 m6 l4 xl3">
+                <div class="card profile theme-text-colour">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+                        <a class="btn-floating activator btn-large halfway-fab waves-effect waves-light theme-colour gradient"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Akshay Soni</span>
+                        <p><i class="material-icons">perm_identity</i> C. E. O.</p>
+                        <p><i class="material-icons">phone</i> +91-1234567890</p>
+                        <p><i class="material-icons">email</i> demo@gmail.com</p>
+                    </div>
+                    <div class="card-reveal theme-colour gradient">
+                        <span class="card-title">Akshay Soni<i class="material-icons right">close</i></span>
+                        <p><i class="material-icons">perm_identity</i> C. E. O.</p>
+                        <p><i class="material-icons">phone</i> +91-1234567890</p>
+                        <p><i class="material-icons">email</i> demo@gmail.com</p>
+                        <p><i class="material-icons">cake</i> 11 JAN 1995</p>
+                    </div>
+                </div>
+            </div>
+            <!-- profilecard end -->
+
+            <!-- productcard start -->
+            <div class="col s12 m6 l4 xl3">
+                <div class="card product">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="#!" class="btn-floating btn-large waves-effect waves-light btn-bigfloat pink accent-2">$189</a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="product-img">
+                        </a>
+                    </div>
+                    <ul class="card-action-buttons">
+                        <li><a class="btn-floating btn-large waves-effect waves-light green accent-4"><i class="material-icons">share</i></a>
+                        </li>
+                        <li><a class="btn-floating btn-large waves-effect waves-light red accent-3"><i class="material-icons">favorite</i></a>
+                        </li>
+                        <li><a class="btn-floating btn-large activator waves-effect waves-light light-blue"><i class="material-icons">info</i></a>
+                        </li>
+                    </ul>
+                    <div class="card-content ">
+
+                        <div class="row">
+                            <div class="col s8">
+                                <p class="card-title "><a href="#" class="theme-text-colour">Apple MacBook Pro A1278 13"</a>
+                                </p>
+                            </div>
+                            <div class="col s4 no-padding">
+                                <a href=""></a><img src="https://mpng.pngfly.com/20180920/kl/kisspng-javascript-html5-cascading-style-sheets-css3-5ba40e8038ab77.3391088215374782722321.jpg" alt="amazon" class="responsive-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i> Apple MacBook Pro A1278 13"</span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- productcard end -->
+            <!-- progress start -->
+            <div class="col s12 m12 l8 xl6">
+                <ul class="collection with-header">
+                    <li class="collection-header theme-colour gradient">
+                        <h4>Work Progress</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row progress-wrap">
+                            <div class="col s5">
+                                <span class="theme-text-colour progress-text">Designing dashboard</span>
+                            </div>
+                            <div class="col s3">
+                                <span class="badge info left">
+                                    info
+                                </span>
+                            </div>
+                            <div class="col s4">
+                                <div class="progress">
+                                    <div class="determinate theme-colour" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row progress-wrap">
+                            <div class="col s5">
+                                <span class="theme-text-colour progress-text">Developing javascript</span>
+                            </div>
+                            <div class="col s3">
+                                <span class="badge danger left">
+                                    danger
+                                </span>
+                            </div>
+                            <div class="col s4">
+                                <div class="progress">
+                                    <div class="determinate theme-colour" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row progress-wrap">
+                            <div class="col s5">
+                                <span class="theme-text-colour progress-text">Adding animations</span>
+                            </div>
+                            <div class="col s3">
+                                <span class="badge success left">
+                                    success
+                                </span>
+                            </div>
+                            <div class="col s4">
+                                <div class="progress">
+                                    <div class="determinate theme-colour" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row progress-wrap">
+                            <div class="col s5">
+                                <span class="theme-text-colour progress-text">Fixing project bugs</span>
+                            </div>
+                            <div class="col s3">
+                                <span class="badge primary left">
+                                    primary
+                                </span>
+                            </div>
+                            <div class="col s4">
+                                <div class="progress">
+                                    <div class="determinate theme-colour" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- progress end -->
+        </div>
+        <!-- datatable start -->
+        <div class="row">
+            <div class="col s12">
+                <ul class="collection with-header">
+                    <li class="collection-header theme-colour gradient">
+                        <h3>Data Table</h3>
+                    </li>
+                    <li class="collection-item">
+
+
+                        <div class="theme-text-colour">
+
+                            <table id="example" class="mdl-data-table" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>63</td>
+                                        <td>2011/07/25</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>66</td>
+                                        <td>2009/01/12</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cedric Kelly</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2012/03/29</td>
+                                        <td>$433,060</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>33</td>
+                                        <td>2008/11/28</td>
+                                        <td>$162,700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brielle Williamson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2012/12/02</td>
+                                        <td>$372,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Herrod Chandler</td>
+                                        <td>Sales Assistant</td>
+                                        <td>San Francisco</td>
+                                        <td>59</td>
+                                        <td>2012/08/06</td>
+                                        <td>$137,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rhona Davidson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Tokyo</td>
+                                        <td>55</td>
+                                        <td>2010/10/14</td>
+                                        <td>$327,900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colleen Hurst</td>
+                                        <td>Javascript Developer</td>
+                                        <td>San Francisco</td>
+                                        <td>39</td>
+                                        <td>2009/09/15</td>
+                                        <td>$205,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sonya Frost</td>
+                                        <td>Software Engineer</td>
+                                        <td>Edinburgh</td>
+                                        <td>23</td>
+                                        <td>2008/12/13</td>
+                                        <td>$103,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jena Gaines</td>
+                                        <td>Office Manager</td>
+                                        <td>London</td>
+                                        <td>30</td>
+                                        <td>2008/12/19</td>
+                                        <td>$90,560</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quinn Flynn</td>
+                                        <td>Support Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2013/03/03</td>
+                                        <td>$342,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Charde Marshall</td>
+                                        <td>Regional Director</td>
+                                        <td>San Francisco</td>
+                                        <td>36</td>
+                                        <td>2008/10/16</td>
+                                        <td>$470,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Haley Kennedy</td>
+                                        <td>Senior Marketing Designer</td>
+                                        <td>London</td>
+                                        <td>43</td>
+                                        <td>2012/12/18</td>
+                                        <td>$313,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tatyana Fitzpatrick</td>
+                                        <td>Regional Director</td>
+                                        <td>London</td>
+                                        <td>19</td>
+                                        <td>2010/03/17</td>
+                                        <td>$385,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Silva</td>
+                                        <td>Marketing Designer</td>
+                                        <td>London</td>
+                                        <td>66</td>
+                                        <td>2012/11/27</td>
+                                        <td>$198,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul Byrd</td>
+                                        <td>Chief Financial Officer (CFO)</td>
+                                        <td>New York</td>
+                                        <td>64</td>
+                                        <td>2010/06/09</td>
+                                        <td>$725,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gloria Little</td>
+                                        <td>Systems Administrator</td>
+                                        <td>New York</td>
+                                        <td>59</td>
+                                        <td>2009/04/10</td>
+                                        <td>$237,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bradley Greer</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>41</td>
+                                        <td>2012/10/13</td>
+                                        <td>$132,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dai Rios</td>
+                                        <td>Personnel Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td>35</td>
+                                        <td>2012/09/26</td>
+                                        <td>$217,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenette Caldwell</td>
+                                        <td>Development Lead</td>
+                                        <td>New York</td>
+                                        <td>30</td>
+                                        <td>2011/09/03</td>
+                                        <td>$345,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yuri Berry</td>
+                                        <td>Chief Marketing Officer (CMO)</td>
+                                        <td>New York</td>
+                                        <td>40</td>
+                                        <td>2009/06/25</td>
+                                        <td>$675,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caesar Vance</td>
+                                        <td>Pre-Sales Support</td>
+                                        <td>New York</td>
+                                        <td>21</td>
+                                        <td>2011/12/12</td>
+                                        <td>$106,450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Doris Wilder</td>
+                                        <td>Sales Assistant</td>
+                                        <td>Sidney</td>
+                                        <td>23</td>
+                                        <td>2010/09/20</td>
+                                        <td>$85,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Angelica Ramos</td>
+                                        <td>Chief Executive Officer (CEO)</td>
+                                        <td>London</td>
+                                        <td>47</td>
+                                        <td>2009/10/09</td>
+                                        <td>$1,200,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Joyce</td>
+                                        <td>Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>42</td>
+                                        <td>2010/12/22</td>
+                                        <td>$92,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jennifer Chang</td>
+                                        <td>Regional Director</td>
+                                        <td>Singapore</td>
+                                        <td>28</td>
+                                        <td>2010/11/14</td>
+                                        <td>$357,650</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brenden Wagner</td>
+                                        <td>Software Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>28</td>
+                                        <td>2011/06/07</td>
+                                        <td>$206,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fiona Green</td>
+                                        <td>Chief Operating Officer (COO)</td>
+                                        <td>San Francisco</td>
+                                        <td>48</td>
+                                        <td>2010/03/11</td>
+                                        <td>$850,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shou Itou</td>
+                                        <td>Regional Marketing</td>
+                                        <td>Tokyo</td>
+                                        <td>20</td>
+                                        <td>2011/08/14</td>
+                                        <td>$163,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michelle House</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Sidney</td>
+                                        <td>37</td>
+                                        <td>2011/06/02</td>
+                                        <td>$95,400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suki Burks</td>
+                                        <td>Developer</td>
+                                        <td>London</td>
+                                        <td>53</td>
+                                        <td>2009/10/22</td>
+                                        <td>$114,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prescott Bartlett</td>
+                                        <td>Technical Author</td>
+                                        <td>London</td>
+                                        <td>27</td>
+                                        <td>2011/05/07</td>
+                                        <td>$145,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Cortez</td>
+                                        <td>Team Leader</td>
+                                        <td>San Francisco</td>
+                                        <td>22</td>
+                                        <td>2008/10/26</td>
+                                        <td>$235,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Martena Mccray</td>
+                                        <td>Post-Sales support</td>
+                                        <td>Edinburgh</td>
+                                        <td>46</td>
+                                        <td>2011/03/09</td>
+                                        <td>$324,050</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sakura Yamamoto</td>
+                                        <td>Support Engineer</td>
+                                        <td>Tokyo</td>
+                                        <td>37</td>
+                                        <td>2009/08/19</td>
+                                        <td>$139,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thor Walton</td>
+                                        <td>Developer</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2013/08/11</td>
+                                        <td>$98,540</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Finn Camacho</td>
+                                        <td>Support Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>47</td>
+                                        <td>2009/07/07</td>
+                                        <td>$87,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serge Baldwin</td>
+                                        <td>Data Coordinator</td>
+                                        <td>Singapore</td>
+                                        <td>64</td>
+                                        <td>2012/04/09</td>
+                                        <td>$138,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Bruce</td>
+                                        <td>Javascript Developer</td>
+                                        <td>Singapore</td>
+                                        <td>29</td>
+                                        <td>2011/06/27</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donna Snider</td>
+                                        <td>Customer Support</td>
+                                        <td>New York</td>
+                                        <td>27</td>
+                                        <td>2011/01/25</td>
+                                        <td>$112,000</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- datatable end -->
+        <!-- advanceform start -->
+        <div class="row">
+            <!-- registerform start -->
+            <div class="col s12 m12 l8 xl8">
+                <ul class="collection with-header theme-text-colour">
+                    <li class="collection-header theme-colour gradient">
+                        <h4>Registration Form</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">person</i>
+                                        <input id="first_name" type="text" class="validate">
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">person</i>
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s6 m4">
+                                        <i class="material-icons prefix">calendar_today</i>
+                                        <input type="text" class="datepicker">
+                                    </div>
+                                    <div class="input-field col s6 m4">
+                                        <select multiple>
+                                              <option value="1" selected>Science</option>
+                                              <option value="2">Commerce</option>
+                                              <option value="3">Arts</option>
+                                            </select>
+                                        <label>Stream</label>
+                                    </div>
+                                    <div class="file-field input-field col s12 m4">
+                                        <div class="btn theme-colour gradient">
+                                            <span>File</span>
+                                            <input type="file">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">alternate_email</i>
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                        <span class="helper-text" data-error="need a valid email" data-success="your email is safe with us">*mandatory</span>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">phone_iphone</i>
+                                        <input id="mobile" type="text" class="validate">
+                                        <label for="mobile">Mobile no.</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s4 right">
+                                        <button class="btn btn-large waves-effect waves-light theme-colour gradient" type="button" name="action">Submit
+                                                <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- registerform end -->
+            <!-- loginform start -->
+            <div class="col s12 m6 l4 xl4">
+                <ul class="collection with-header theme-text-colour">
+                    <li class="collection-header theme-colour gradient">
+                        <h4>Login Form</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div class="row">
+                            <form class="col s12">
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">person</i>
+                                        <input id="login_user_name" type="text" class="validate">
+                                        <label for="user_name">User Name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input id="login_password" type="password" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 input-field left">
+                                        <p>
+                                            <label>
+                                            <input type="checkbox" />
+                                            <span>Remember me</span>
+                                        </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s4 right">
+                                        <button class="btn waves-effect waves-light theme-colour gradient" type="button" name="action">Login
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- loginform end  -->
+        </div>
+        <!-- advanceform end -->
+        <!-- carousel start -->
+        <div class="row">
+            <div class="col s12 l12">
+                <div class="carousel carousel-slider carousel-wrap">
+                    <a class="carousel-item" href="#one!"><img src="https://images.unsplash.com/photo-1528920304568-7aa06b3dda8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></a>
+                    <a class="carousel-item" href="#two!"><img src="https://images.unsplash.com/photo-1473654729523-203e25dfda10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></a>
+                    <a class="carousel-item" href="#three!"><img src="https://images.unsplash.com/photo-1548625361-58a9b86aa83b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
+                    <a class="carousel-item" href="#four!"><img src="https://images.unsplash.com/photo-1548625150-6faf2430967f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></a>
+                </div>
+            </div>
+        </div>
+        <!-- carousel end -->
+        <!-- chat start -->
+        <div class="row">
+            <div class="col s12 l8 xl8">
+                <ul class="collection with-header theme-text-colour">
+                    <li class="collection-header theme-colour gradient">
+                        <h4>Chat</h4>
+                    </li>
+                    <li class="collection-item">
+                        <span class="title"><h4 class="no-margin">Akshay</h4></span>
+                        <p class=" no-margin">
+                            <i class="material-icons online-icon green-text">fiber_manual_record</i> online
+                        </p>
+                    </li>
+                    <li class="collection-item message">
+                        <div class="row">
+                            <div class="col s4 message-box info">
+                                <p>Hi... <br> How are you ?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s4 message-box success right">
+                                <p>Fine bro. <br> how are you ? <br> Whats going on?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s4 message-box info">
+                                <p>I am fine too. <br> Missed you in yesterday's party
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s4 message-box info">
+                                <p>let's meetup today.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <span class="title">Title</span> -->
+
+                        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+                    </li>
+                    <li class="collection-item blue-grey">
+                        <div class="row search-wrap">
+
+                            <div class="col s10 ">
+                                <div class="input-field ">
+                                    <!-- <i class="material-icons prefix search-icon">search</i> -->
+                                    <input type="text" placeholder="Type a message" class="autocomplete search-field theme-text-colour">
+                                </div>
+                            </div>
+                            <div class="col s2 center">
+                                <div class="input-field">
+                                    <div class="btn success">
+                                        <i class="material-icons">send</i>
+                                    </div>
+                                </div>
+                                <!--  -->
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- chat end -->
+        <div class="col l4">
+
+            <div id='calendar1'></div>
+        </div>
+    </div>
+    <!-- content end -->
+</body>
+<script src="dist/app.min.js"></script>
+<script src="dist/app2.min.js"></script>
+<script src="dist/app3.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.preloader-background').delay(1000).fadeOut('slow');
+        // $('.preloader-wrapper');
+        // .fadeOut(2000);
+    });
+    var mycolour = {};
+    // mycolour['blueish'] = '#107896';
+    // mycolour['lightblueish'] = '#32CBF1';
+    mycolour['forestgreen'] = '#003300';
+    mycolour['lightforestgreen'] = '#66b266';
+    mycolour['midnightblue'] = '#191970';
+    mycolour['lightmidnightblue'] = '#6464DC';
+    mycolour['tealish'] = '#006D5B';
+    mycolour['lighttealish'] = '#00C9A8';
+    mycolour['blood'] = '#800020';
+    mycolour['lightblood'] = '#FF668D';
+    mycolour['girl'] = '#FF033E';
+    mycolour['lightgirl'] = '#FF5F84';
+    mycolour['lavender'] = '#2e0b34';
+    mycolour['lightlavender'] = '#b967c7';
+    var mybg = {};
+    // mybg['blueish'] = 'https://images.unsplash.com/photo-1549490316-686f9b5d359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    mybg['forestgreen'] = 'https://images.unsplash.com/photo-1473081556163-2a17de81fc97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    mybg['midnightblue'] = 'https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    mybg['tealish'] = 'https://images.unsplash.com/photo-1501408459713-977c880160ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    mybg['blood'] = 'https://images.unsplash.com/photo-1520624598504-ed830bd895d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    mybg['girl'] = 'https://images.unsplash.com/photo-1503455637927-730bce8583c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    mybg['lavender'] = 'https://images.unsplash.com/photo-1477093782505-e10aaeb27c6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+    $(document).ready(function() {
+        var selectedcolour = 'forestgreen';
+        var colour = mycolour[selectedcolour];
+        var lightcolour = mycolour['light' + selectedcolour];
+        var bgimage = mybg[selectedcolour];
+        $('.sidenav').sidenav();
+        $('.sidenav1').sidenav({
+            edge: 'right'
+        });
+        $('.collapsible').collapsible();
+        $(".dropdown-trigger").dropdown();
+        $('.datepicker').datepicker();
+        $('select').formSelect();
+        $('.modal').modal({
+            dismissible: false
+        });
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true
+        });
+
+        $('body').css({
+            'background-color': '#f5f5f5'
+        });
+        themechanger(selectedcolour);
+        $('.chartdiv').css({
+            'height': '320px'
+        });
+        $('.chartdiv2').css({
+            'height': '280px'
+        });
+        $('#example').DataTable({
+            columnDefs: [{
+                targets: [0, 1, 2],
+                className: 'mdl-data-table__cell--non-numeric'
+            }],
+            responsive: 'true'
+        });
+
+        // $('#custom').html(".sidenav {background-image: url('" + bgimage + "'); background-size: cover;}");
+        // $('#page').html(".pagination li a {color:#444 !important;}a.page-link{background-color:inherit !important;}.pagination li.active{background-color:" + colour + " !important;}.pagination li.active a{color:white !important;}.pagination li.disabled a {cursor: default;color: #999 !important;}");
+        // $('#material-custom').html("input:not([type]):focus:not([readonly]),input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {border-bottom: 1px solid " + colour + ";-webkit-box-shadow: 0 1px 0 0 " + colour + ";box-shadow: 0 1px 0 0 " + colour + ";}[type=checkbox]:checked+span:not(.lever):before {    border-right: 2px solid " + colour + ";border-bottom: 2px solid " + colour + ";}input:not([type]):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {color: " + colour + ";}.input-field.col .prefix~.validate~label, .input-field.col .prefix~label {width: max-content;}.input-field .prefix.active{color:" + colour + "}.select-dropdown li>a,.select-dropdown li>span{color:" + colour + "}");
+        $('a[colour]').on('click', function() {
+            selectedcolour = $(this).attr('colour');
+            themechanger(selectedcolour);
+        });
+
+        function themechanger(selectedcolour) {
+            colour = mycolour[selectedcolour];
+            lightcolour = mycolour['light' + selectedcolour];
+            bgimage = mybg[selectedcolour];
+            $('.theme-colour').css({
+                'background-color': colour,
+                'color': 'white'
+            });
+            $('.theme-colour.gradient').css({
+                'background': '-webkit-linear-gradient(bottom, ' + colour + ' 0%, ' + lightcolour + ' 100%)',
+                'color': 'white'
+            });
+            $('.theme-colour.light-colour').css({
+                'background-color': lightcolour,
+                'color': 'white'
+            });
+            $('.theme-text-colour').css({
+                'color': colour
+            });
+            $('.subheader').css({
+                'color': 'grey'
+            });
+            $('#page').html(".pagination li a {color:#444 !important;}a.page-link{background-color:inherit !important;}.pagination li.active{background-color:" + colour + " !important;}.pagination li.active a{color:white !important;}.pagination li.disabled a {cursor: default;color: #999 !important;}");
+            $('#material-custom').html("input:not([type]):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {border-bottom: 1px solid " + colour + ";-webkit-box-shadow: 0 1px 0 0 " + colour + ";box-shadow: 0 1px 0 0 " + colour + ";}[type=checkbox]:checked+span:not(.lever):before {    border-right: 2px solid " + colour + ";border-bottom: 2px solid " + colour + ";}input:not([type]):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {color: " + colour + ";}.input-field.col .prefix~.validate~label, .input-field.col .prefix~label {width: max-content;}.input-field .prefix.active{color:" + colour + "}.select-dropdown li>a,.select-dropdown li>span{color:" + colour + "}.select-wrapper input.select-dropdown:focus {border-bottom: 1px solid " + colour + ";}");
+            $('#custom').html(".sidenav {background-image: url('" + bgimage + "'); background-size: cover;}");
+        }
+    });
+</script>
+<script>
+    am4core.ready(function() {
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        var data = [];
+        var open = 100;
+        var close = 250;
+
+        for (var i = 1; i < 120; i++) {
+            open += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 4);
+            close = Math.round(open + Math.random() * 5 + i / 5 - (Math.random() < 0.5 ? 1 : -1) * Math.random() * 2);
+            data.push({
+                date: new Date(2018, 0, i),
+                open: open,
+                close: close
+            });
+        }
+
+        chart.data = data;
+
+        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.tooltip.disabled = true;
+
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.dateX = "date";
+        series.dataFields.openValueY = "open";
+        series.dataFields.valueY = "close";
+        series.tooltipText = "open: {openValueY.value} close: {valueY.value}";
+        series.sequencedInterpolation = true;
+        series.fillOpacity = 0.3;
+        series.defaultState.transitionDuration = 1000;
+        series.tensionX = 0.8;
+
+        var series2 = chart.series.push(new am4charts.LineSeries());
+        series2.dataFields.dateX = "date";
+        series2.dataFields.valueY = "open";
+        series2.sequencedInterpolation = true;
+        series2.defaultState.transitionDuration = 1500;
+        series2.stroke = chart.colors.getIndex(6);
+        series2.tensionX = 0.8;
+
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.xAxis = dateAxis;
+        chart.scrollbarX = new am4core.Scrollbar();
+        chart.responsive.enabled = true;
+    }); // end am4core.ready()
+</script>
+<script>
+    am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        // Create chart instance
+        var chart = am4core.create("chartdiv2", am4charts.PieChart);
+
+        // Add data
+        chart.data = [{
+            "country": "Lithuania",
+            "litres": 501.9
+        }, {
+            "country": "Czech Republic",
+            "litres": 301.9
+        }, {
+            "country": "Ireland",
+            "litres": 201.1
+        }, {
+            "country": "Germany",
+            "litres": 165.8
+        }, {
+            "country": "Australia",
+            "litres": 139.9
+        }, {
+            "country": "Austria",
+            "litres": 128.3
+        }, {
+            "country": "UK",
+            "litres": 99
+        }, {
+            "country": "Belgium",
+            "litres": 60
+        }, {
+            "country": "The Netherlands",
+            "litres": 50
+        }];
+
+        // Set inner radius
+        chart.innerRadius = am4core.percent(50);
+
+        // Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeWidth = 2;
+        pieSeries.slices.template.strokeOpacity = 1;
+
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+
+    }); // end am4core.ready()
+</script>
+
+</html>
