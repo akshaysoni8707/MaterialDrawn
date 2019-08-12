@@ -1,0 +1,9 @@
+{
+    "name": "material-drawn",
+    "version": "1.0.0",
+    "description": "Materialize Admin Dashboard Template",
+    "main": "index.js",
+    "repository": "https://github.com/akshaysoni8707/MaterialDrawn.git",
+    "author": "Akshay <akshay.soni.8707@gmail.com>",
+    "license": "GPL-2.0"
+}
