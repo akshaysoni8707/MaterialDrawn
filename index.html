@@ -236,7 +236,7 @@
         </li>
 
         <li><a href="#!">Plain Sidebar Link</a></li>
-
+        <li><a href="#dashboard" direct class="waves-effect waves-light">Dashboard</a></li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
@@ -252,6 +252,18 @@
                 </li>
             </ul>
         </li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header waves-effect waves-light"><i class="material-icons">arrow_drop_down</i>Components</div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#badges" direct class="waves-effect waves-light">Badges</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
         <li>
             <div class="divider"></div>
         </li>
@@ -262,7 +274,7 @@
     <!-- sidenav end -->
 
     <!-- content start -->
-    <div class="row-wrap">
+    <div class="row-wrap" id="dashboard">
         <div class="row">
 
             <!-- chartcard start -->
@@ -1141,6 +1153,116 @@
         </div>
     </div>
     <!-- content end -->
+    <!-- badges start -->
+    <div id="badges" class="paddingtop row-wrap">
+        <div class="row theme-colour gradient">
+            <h1 class="center">Badges</h1>
+        </div>
+        <div class="row theme-text-colour">
+            <div class="col s6">
+                <div class="collection">
+                    <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+                    <a href="#!" class="collection-item">Alan</a>
+                    <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+                </div>
+            </div>
+            <div class="col s6">
+                <h4 class="theme-text-colour center">Badges in collection</h4>
+            </div>
+        </div>
+        <div class="row theme-text-colour">
+            <div class="col s6">
+                <ul id="dropdown3" class="dropdown-content">
+                    <li><a href="#!">one<span class="badge">1</span></a></li>
+                    <li><a href="#!">two<span class="new badge">1</span></a></li>
+                    <li><a href="#!">three</a></li>
+                </ul>
+                <a class="btn dropdown-trigger" href="#!" data-target="dropdown3">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+            </div>
+            <div class="col s6">
+                <h4 class="theme-text-colour center">Badges in Dropdown</h4>
+            </div>
+
+        </div>
+        <div class="row theme-text-colour">
+
+            <div class="col s6">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="" class="brand-logo">Logo</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="">sass</a></li>
+                            <li><a href="">sass <span class="new badge">4</span></a></li>
+                            <li><a href="">sass</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col s6">
+                <h4 class="theme-text-colour center">Badges in Navbar</h4>
+            </div>
+        </div>
+        <div class="row theme-text-colour">
+            <div class="col s6">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">filter_drama</i> First
+                            <span class="new badge">4</span></div>
+                        <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">place</i> Second
+                            <span class="badge">1</span></div>
+                        <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s6">
+                <h4 class="theme-text-colour center">Badges in collipsible</h4>
+            </div>
+        </div>
+        <div class="row theme-text-colour">
+            <div class="col s6">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">filter_drama</i> First
+                            <span class="new badge" data-badge-caption="custom caption">4</span></div>
+                        <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s6">
+                <h4 class="theme-text-colour center">Badges with custom caption</h4>
+            </div>
+        </div>
+        <div class="row theme-text-colour">
+            <div class="col s6">
+                <div class="collection">
+                    <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="badge primary">primary</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="badge success">success</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="badge info">info</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="badge danger">danger</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="new badge red" data-badge-caption="custom caption">red</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="new badge purple">purple</span>Alan</a>
+                </div>
+            </div>
+            <div class="col s6">
+                <h4 class="theme-text-colour center">Badges with background colour</h4>
+            </div>
+        </div>
+    </div>
+    <!-- badges end -->
 </body>
 <script src="dist/app.min.js"></script>
 <script src="dist/app2.min.js"></script>

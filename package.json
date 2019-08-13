@@ -5,5 +5,14 @@
     "main": "index.js",
     "repository": "https://github.com/akshaysoni8707/MaterialDrawn.git",
     "author": "Akshay <akshay.soni.8707@gmail.com>",
-    "license": "GPL-2.0"
+    "license": "GPL-2.0",
+    "keywords": [
+        "Materialize",
+        "Admin",
+        "Dashboard",
+        "jquery",
+        "boilerplate",
+        "datatables",
+        "materialize-distribution"
+    ]
 }

@@ -24,6 +24,10 @@
     box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
+.paddingtop {
+    padding-top: 60px !important;
+}
+
 .row-wrap {
     margin: 20px 40px;
 }
