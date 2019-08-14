@@ -10,8 +10,11 @@
         "Materialize",
         "Admin",
         "Dashboard",
+        "Admin-dashboard",
+        "distribution",
         "jquery",
-        "boilerplate",
+        "theme",
+        "template",
         "datatables",
         "materialize-distribution"
     ]

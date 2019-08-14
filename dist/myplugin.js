@@ -22,7 +22,7 @@ mybg['blood'] = 'https://images.unsplash.com/photo-1520624598504-ed830bd895d3?ix
 mybg['girl'] = 'https://images.unsplash.com/photo-1503455637927-730bce8583c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 mybg['lavender'] = 'https://images.unsplash.com/photo-1477093782505-e10aaeb27c6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 $(document).ready(function() {
-    var selectedcolour = 'forestgreen';
+    var selectedcolour = 'lavender';
     var colour = mycolour[selectedcolour];
     var lightcolour = mycolour['light' + selectedcolour];
     var bgimage = mybg[selectedcolour];

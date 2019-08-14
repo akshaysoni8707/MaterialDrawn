@@ -107,4 +107,4 @@ basic demo of [Material Drawn](https://materialdrawn.000webhostapp.com) .
 
 **Notice**
 
-Until i complete all components you can directly right components from [Materialize.css](https://materializecss.com/).
+Until i complete all components you can directly write components from [Materialize.css](https://materializecss.com/).
