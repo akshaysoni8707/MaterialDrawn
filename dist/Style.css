@@ -24,6 +24,10 @@
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
 }
 
+.sidenav {
+    width: 250px;
+}
+
 .paddingtop {
     padding-top: 60px !important;
 }
@@ -76,12 +80,10 @@ nav .setting-trigger {
 }
 
 .card.profile {
-    /* max-height: 500px; */
     font-size: 20px;
     font-weight: 400;
     line-height: 1.8em;
     background-color: white;
-    /* color: purple; */
 }
 
 .profile .card-image,
@@ -103,13 +105,13 @@ nav .setting-trigger {
     height: -webkit-fill-available;
 }
 
+.progress-text {
+    font-size: 20px;
+}
+
 .card-content .material-icons,
 .card-reveal .material-icons {
     vertical-align: sub;
-}
-
-.progress-text {
-    font-size: 20px;
 }
 
 .task-text {
@@ -117,15 +119,15 @@ nav .setting-trigger {
     font-size: 20px !important;
 }
 
+.status-card {
+    max-height: 200px;
+    min-height: 150px;
+}
+
 .collection {
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
-}
-
-.status-card {
-    max-height: 200px;
-    min-height: 170px;
 }
 
 .status-card-text {
@@ -200,11 +202,6 @@ form .row {
     margin: 0px;
 }
 
-
-/* 
-    Loading Css
- */
-
 .preloader-background {
     display: flex;
     align-items: center;
@@ -217,14 +214,6 @@ form .row {
     right: 0;
     bottom: 0;
 }
-
-
-/* #themechooser button {
-    padding: 0px;
-    height: 70px;
-    width: 100%;
-    margin-bottom: 10px;
-} */
 
 .sidenav .collapsible-header {
     background-color: transparent !important;
@@ -252,7 +241,7 @@ input[type=checkbox]:checked+span.task-text {
 }
 
 .carousel-wrap {
-    height: 500px !important;
+    height: -webkit-fill-available !important;
 }
 
 .search-field {
@@ -262,6 +251,9 @@ input[type=checkbox]:checked+span.task-text {
     width: -webkit-fill-available !important;
     height: 32px !important;
     background-color: white !important;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75) !important;
 }
 
 .search-wrap {
@@ -283,8 +275,11 @@ input::placeholder {
     opacity: 1 !important;
 }
 
+.collection.with-header .collection-item {
+    padding: 15px;
+}
+
 .message {
-    padding-left: 20px !important;
     background-image: url('https://images.unsplash.com/photo-1551001626-86e913f8baf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60');
     background-size: cover;
 }
@@ -302,4 +297,63 @@ input::placeholder {
 
 .online-icon {
     vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+    /* styles */
+    html {
+        font-size: 13px;
+    }
+    .card {
+        -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
+    }
+    .paddingtop {
+        padding-top: 60px !important;
+    }
+    .row-wrap {
+        margin: 20px 10px !important;
+    }
+    .datatable-wrap {
+        margin: 10px;
+    }
+    .collection.with-header .collection-item {
+        padding: 10px;
+    }
+    .progress-wrap {
+        margin: 5px;
+    }
+    .sidenav {
+        width: 200px;
+    }
+    .card.profile {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6em;
+        background-color: white;
+    }
+    .card-title {
+        font-size: 25px !important;
+        font-weight: 400 !important;
+    }
+    .progress-text {
+        font-size: 15px;
+    }
+    .task-text {
+        line-height: inherit !important;
+        font-size: 18px !important;
+    }
+    .collection {
+        -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
+    }
+    .badge {
+        padding: 0px 10px !important;
+        border-radius: 10px;
+    }
+    .message .row {
+        margin: 10px 10px;
+    }
 }
