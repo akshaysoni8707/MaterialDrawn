@@ -1,11 +1,21 @@
 # Welcome to Material Drawn !
 > **A Materialize CSS framework based admin dashboard**
 
-**Material Drawn** is a free Materialize Admin with a fresh design inspired by Google's Material Design. We are very excited to introduce our material concepts through an easy to use and beautiful set of components. Material Drawn was built over the popular materialize framework and it comes with a couple of third-party plugins ( amcharts, datatables ) redesigned to fit in with the rest of the elements.
+**Material Drawn** is a free Materialize Admin with a fresh design inspired by Google's Material Design. We are very excited to introduce our material concepts through an easy to use and beautiful set of components. Material Drawn was built over the popular materialize framework and it comes with a couple of third-party plugins ( [amcharts](https://www.amcharts.com/), [datatables](https://datatables.net/) ) redesigned to fit in with the rest of the elements.
 
   
-Material Dashboard comes with 6 color theme choices for any component as background ( lavender , forestgreen, midnightblue, teal, blood, girl ) and a background image on the sidebar for each color.
-We are very excited to share this dashboard with you and we look forward to hearing your feedback!  
+Material Dashboard comes with 6 color theme choices for any component as background  
+
+ 1. lavender
+ 2. forestgreen
+ 3. midnightblue
+ 4. teal
+ 5. blood
+ 6. girl
+ 
+ with a background image on the sidebar for each color. You can also create a theme colour of your own just be ready with your colour along with its lighter shade and an image matching it. We are very excited to share this dashboard with you and we look forward to hearing your feedback ! 
+ 
+ >For adding your custom theme colour or any other feedback mail me akshay.soni.8707@gmail.com .
   
 You can find the [Github Repo for Material Drawn here](https://github.com/akshaysoni8707/MaterialDrawn).
 
@@ -37,7 +47,6 @@ register page css is in:
 
 **JS files**
 all framework distribution JS are in:
->
 
     dist/app.min.js
     dist/app2.min.js
@@ -104,7 +113,9 @@ basic demo of [Material Drawn](https://materialdrawn.000webhostapp.com) .
 
  - UI components 
  - JS components
+ - Few custom components recommended by my fans
 
 **Notice**
 
 Until i complete all components you can directly write components from [Materialize.css](https://materializecss.com/).
+Please support my work , star and watch my [repo](https://github.com/akshaysoni8707/MaterialDrawn) and follow me on [github](https://github.com/akshaysoni8707) for all upcoming updates in MaterialDrawn and other future projects.  
