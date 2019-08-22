@@ -16,7 +16,7 @@ Material Dashboard comes with 6 color theme choices for any component as backgro
  
  with a background image on the sidebar for each color. You can also create a theme colour of your own just be ready with your colour along with its lighter shade and an image matching it. We are very excited to share this dashboard with you and we look forward to hearing your feedback ! 
  
- >For adding your custom theme colour or any other feedback mail me akshay.soni.8707@gmail.com .
+ For adding your custom theme colour or any other feedback mail me akshay.soni.8707@gmail.com .
   
 You can find the [Github Repo for Material Drawn here](https://github.com/akshaysoni8707/MaterialDrawn).
 
@@ -118,5 +118,6 @@ basic demo of [Material Drawn](https://materialdrawn.000webhostapp.com) .
 
 **Notice**
 
+New features added like Profile (timeline and setting) , Chating and many more.
 Until i complete all components you can directly write components from [Materialize.css](https://materializecss.com/).
 Please support my work , star and watch my [repo](https://github.com/akshaysoni8707/MaterialDrawn) and follow me on [github](https://github.com/akshaysoni8707) for all upcoming updates in MaterialDrawn and other future projects.  
