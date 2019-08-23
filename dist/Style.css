@@ -343,6 +343,21 @@ input::placeholder {
     font-weight: bold;
 }
 
+.download-link {
+    height: 36px;
+    width: 36px;
+}
+
+.down-circle {
+    box-sizing: border-box;
+    display: inline-block !important;
+    border-radius: 50%;
+    height: 36px !important;
+    width: 36px !important;
+    padding: 0px !important;
+    margin: 0px 0px 0px 10px;
+}
+
 @media screen and (max-width: 600px) {
     /* styles */
     html {
