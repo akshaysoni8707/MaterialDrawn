@@ -108,7 +108,7 @@ my plugin js with theme changer and all init for index.html is in:
 
 After completing the procedure of installation open the index.html in your browser for the demo dashboard ,update it and have fun using it.
 
-basic demo of [Material Drawn](https://materialdrawn.000webhostapp.com) .
+basic demo of [Material Drawn](https://material-drawn.herokuapp.com).
 
 **Coming Soon**
 
