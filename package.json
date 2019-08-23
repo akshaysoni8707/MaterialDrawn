@@ -20,5 +20,9 @@
         "template",
         "datatables",
         "materialize-distribution"
-    ]
+    ],
+    "engines": {
+        "node": "5.0.0",
+        "npm": "4.6.1"
+    }
 }
