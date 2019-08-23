@@ -1,46 +1,15 @@
-var http = require('http');
-var fs = require('fs');
-var path = require('path');
+var express = require('express');
+var app = express();
 
-http.createServer(function(request, response) {
+app.set('port', (process.env.PORT || 5000));
 
-    console.log('request starting for ');
-    console.log(request);
+app.use(express.static(__dirname));
 
-    var filePath = '.' + request.url;
-    if (filePath == './')
-        filePath = './index.html';
+// views is directory for all template files
+app.get('/', function(request, response) {
+    response.render('index.html');
+});
 
-    console.log(filePath);
-    var extname = path.extname(filePath);
-    var contentType = 'text/html';
-    switch (extname) {
-        case '.js':
-            contentType = 'text/javascript';
-            break;
-        case '.css':
-            contentType = 'text/css';
-            break;
-    }
-
-    path.exists(filePath, function(exists) {
-
-        if (exists) {
-            fs.readFile(filePath, function(error, content) {
-                if (error) {
-                    response.writeHead(500);
-                    response.end();
-                } else {
-                    response.writeHead(200, { 'Content-Type': contentType });
-                    response.end(content, 'utf-8');
-                }
-            });
-        } else {
-            response.writeHead(404);
-            response.end();
-        }
-    });
-
-}).listen(process.env.PORT || 5000);
-
-console.log('Server running at http://127.0.0.1:5000/');
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+});
