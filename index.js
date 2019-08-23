@@ -1,0 +1,1 @@
+window.location.href = "https://material-drawn.herokuapp.com/index.html";
