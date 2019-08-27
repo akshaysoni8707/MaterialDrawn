@@ -42,7 +42,6 @@ $(document).ready(function() {
         fullWidth: true,
         indicators: true
     });
-
     $('body').css({
         'background-color': '#f5f5f5'
     });
@@ -59,6 +58,13 @@ $(document).ready(function() {
             className: 'mdl-data-table__cell--non-numeric'
         }],
         responsive: 'true'
+    });
+    $('.sec').hide();
+    $('#dashboard').show();
+    $('a[callShow]').on('click', function() {
+        var toShow = $(this).attr('href');
+        $('.sec').hide();
+        $(toShow).show();
     });
     $('a[colour]').on('click', function() {
         selectedcolour = $(this).attr('colour');
