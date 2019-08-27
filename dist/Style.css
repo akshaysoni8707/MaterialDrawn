@@ -358,6 +358,21 @@ input::placeholder {
     margin: 0px 0px 0px 10px;
 }
 
+.breadcrumb i,
+.breadcrumb i.material-icons {
+    float: none;
+}
+
+.alert .card-content {
+    font-size: 1.3em;
+}
+
+span[data-dismiss="alert"] {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px !important;
+}
+
 @media screen and (max-width: 600px) {
     /* styles */
     html {

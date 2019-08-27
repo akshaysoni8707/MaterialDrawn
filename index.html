@@ -239,6 +239,7 @@
                     <div class="collapsible-header waves-effect waves-light"><i class="material-icons">arrow_drop_down</i>Components</div>
                     <div class="collapsible-body">
                         <ul>
+                            <li><a href="#alerts" callShow class="waves-effect waves-light">Alerts</a></li>
                             <li><a href="#badges" callShow class="waves-effect waves-light">Badges</a></li>
                             <li><a href="#buttons" callShow class="waves-effect waves-light">Buttons</a></li>
                             <li><a href="#breadcrumbs" callShow class="waves-effect waves-light">Breadcrumbs</a></li>
@@ -288,11 +289,11 @@
                 </div>
             </div>
             <!-- chartcard end -->
-            <!-- mytask start -->
+            <!-- todo start -->
             <div class="col s12 m12 l5 xl5">
                 <ul class="collection with-header">
                     <li class="collection-header theme-colour gradient">
-                        <h4>Tasks</h4>
+                        <h4>To-Do</h4>
                     </li>
                     <li class="collection-item">
                         <div class="row task-wrap">
@@ -361,7 +362,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- mytask end -->
+            <!-- todo end -->
         </div>
         <!-- statuscard start -->
         <div class="row">
@@ -1437,15 +1438,223 @@
                     </div>
                 </div>
             </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Icons</h4>
+                        <nav>
+                            <div class="nav-wrapper theme-colour gradient">
+                                <div class="col s12">
+                                    <a href="#!" class="breadcrumb"><i class="material-icons">home</i></a>
+                                    <a href="#!" class="breadcrumb"><i class="material-icons">notifications</i></a>
+                                    <a href="#!" class="breadcrumb"><i class="material-icons">group_add</i></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
     <!-- breadcrumbs end -->
+    <!-- alerts start -->
+    <div id="alerts" class="paddingtop row-wrap sec">
+        <ul class="collection with-header theme-text-colour">
+            <li class="collection-header theme-colour gradient">
+                <h4>Alerts</h4>
+            </li>
+            <li class="collection-item">
+                <div class="row row-wrap">
+                    <div class="col s12 m12 l4">
+                        <p>
+                            <h4>Light</h4>
+                        </p>
+                        <div class="card purple lighten-4 alert">
+                            <div class="card-content purple-text">
+                                Primary : hello i am alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card light-blue lighten-4 alert">
+                            <div class="card-content blue-text">
+                                Info : Basic info alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card red lighten-4 alert">
+                            <div class="card-content red-text">
+                                Danger : A danger alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card green lighten-4 alert">
+                            <div class="card-content green-text">
+                                Success : A success alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4">
+                        <p>
+                            <h4>Dark</h4>
+                        </p>
+                        <div class="card primary lighten-4 alert">
+                            <div class="card-content">
+                                Primary : hello i am alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card info lighten-4 alert">
+                            <div class="card-content">
+                                Info : Basic info alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card danger lighten-4 alert">
+                            <div class="card-content">
+                                Danger : A danger alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card success lighten-4 alert">
+                            <div class="card-content">
+                                Success : A success alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4">
+                        <p>
+                            <h4>Icons</h4>
+                        </p>
+                        <div class="card primary lighten-4 alert">
+                            <div class="card-content">
+                                <i class="material-icons">android</i> Primary : hello i am alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card info lighten-4 alert">
+                            <div class="card-content">
+                                <i class="material-icons">info</i> Info : Basic info alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card danger lighten-4 alert">
+                            <div class="card-content">
+                                <i class="material-icons">help</i> Danger : A danger alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                        <div class="card success lighten-4 alert">
+                            <div class="card-content">
+                                <i class="material-icons">check</i> Success : A success alert
+                                <span class="right" data-dismiss="alert">x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="collection-item">
+                <div class="row row-wrap">
+                    <div class="col s12 m12 l4">
+                        <p>
+                            <h4>Title</h4>
+                        </p>
+                        <div class="card purple lighten-4 alert">
+                            <div class="card-content purple-text">
+                                <span class="card-title">Basic Light<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card primary alert">
+                            <div class="card-content">
+                                <span class="card-title">Basic Dark<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card success alert">
+                            <div class="card-content">
+                                <span class="card-title"><i class="material-icons small">adb</i> Icon Dark<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4">
+                        <p>
+                            <h4>Actions</h4>
+                        </p>
+                        <div class="card indigo lighten-5 alert">
+                            <div class="card-content indigo-text">
+                                <span class="card-title">Basic Light<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="card-action indigo lighten-4">
+                                <a href="#!" class="indigo-text">OK</a>
+                                <a href="#!" class="indigo-text">CANCEL</a>
+                            </div>
+                        </div>
+                        <div class="card blue lighten-1 alert">
+                            <div class="card-content white-text">
+                                <span class="card-title">Basic Dark<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="card-action blue">
+                                <a href="#!" class="white-text">OK</a>
+                                <a href="#!" class="white-text">CANCEL</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4">
+                        <p>
+                            <h4>buttons</h4>
+                        </p>
+                        <div class="card purple darken-3 alert">
+                            <div class="card-content white-text">
+                                <span class="card-title">Basic Light<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="card-action purple darken-4">
+                                <a href="#!" class="waves-effect waves-light btn pink darken-1">OK</a>
+                                <a href="#!" class="waves-effect waves-light btn pink darken-1">CANCEL</a>
+                            </div>
+                        </div>
+                        <div class="card blue darken-3 alert">
+                            <div class="card-content white-text">
+                                <span class="card-title">Basic Dark<span class="right" data-dismiss="alert">x</span></span>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="card-action blue darken-4">
+                                <a href="#!" class="waves-effect waves-light btn success">OK</a>
+                                <a href="#!" class="waves-effect waves-light btn danger">CANCEL</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- alerts end -->
     <!-- footer start -->
     <footer class="page-footer theme-colour gradient">
         <div class="footer-copyright">
             <div class="container">
                 Copyright © 2019 .Designed and Created by
-                <a class="grey-text text-lighten-4" href="https://github.com/akshaysoni8707">Akshay Soni</a>
+                <a class="grey-text text-lighten-2" href="https://github.com/akshaysoni8707">Akshay Soni</a>
             </div>
         </div>
     </footer>

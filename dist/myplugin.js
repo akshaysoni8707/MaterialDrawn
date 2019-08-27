@@ -70,6 +70,9 @@ $(document).ready(function() {
         selectedcolour = $(this).attr('colour');
         themechanger(selectedcolour);
     });
+    $("span[data-dismiss='alert']").on('click', function() {
+        $(this).parents('.card').hide(1000);
+    });
 
     function themechanger(selectedcolour) {
         colour = mycolour[selectedcolour];
