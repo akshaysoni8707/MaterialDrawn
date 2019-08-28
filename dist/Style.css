@@ -224,6 +224,11 @@ form .row {
     color: white;
 }
 
+nav *,
+nav .btn-large:hover {
+    background-color: transparent;
+}
+
 .sidenav li.active {
     background-color: rgba(0, 0, 0, .6);
 }

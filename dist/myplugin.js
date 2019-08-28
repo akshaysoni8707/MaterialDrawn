@@ -4,16 +4,16 @@ $(document).ready(function() {
 var mycolour = {};
 mycolour['forestgreen'] = '#003300';
 mycolour['lightforestgreen'] = '#66b266';
-mycolour['midnightblue'] = '#191970';
-mycolour['lightmidnightblue'] = '#6464DC';
+mycolour['midnightblue'] = '#303f9f';
+mycolour['lightmidnightblue'] = '#45cafc';
 mycolour['tealish'] = '#006D5B';
 mycolour['lighttealish'] = '#00C9A8';
-mycolour['blood'] = '#800020';
-mycolour['lightblood'] = '#FF668D';
+mycolour['blood'] = '#33001b';
+mycolour['lightblood'] = '#ff0084';
 mycolour['girl'] = '#FF033E';
 mycolour['lightgirl'] = '#FF5F84';
-mycolour['lavender'] = '#2e0b34';
-mycolour['lightlavender'] = '#b967c7';
+mycolour['lavender'] = '#2a0845';
+mycolour['lightlavender'] = '#6441A5';
 var mybg = {};
 mybg['forestgreen'] = 'https://images.unsplash.com/photo-1473081556163-2a17de81fc97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 mybg['midnightblue'] = 'https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
@@ -31,6 +31,9 @@ $(document).ready(function() {
         edge: 'right'
     });
     $('.collapsible').collapsible();
+    $('.collapsible.expandable').collapsible({
+        accordion: false
+    });
     $(".dropdown-trigger").dropdown();
     $('.datepicker').datepicker();
     $('select').formSelect();
@@ -83,7 +86,8 @@ $(document).ready(function() {
             'color': 'white'
         });
         $('.theme-colour.gradient').css({
-            'background': '-webkit-linear-gradient(bottom, ' + colour + ' 0%, ' + lightcolour + ' 100%)',
+            // 'background': '-webkit-linear-gradient(bottom, ' + colour + ' 0%, ' + lightcolour + ' 100%)',
+            'background': '-webkit-linear-gradient(40deg,' + colour + ',' + lightcolour + ')',
             'color': 'white'
         });
         $('.theme-colour.light-colour').css({
