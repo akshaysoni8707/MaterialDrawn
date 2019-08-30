@@ -50,7 +50,6 @@
                     <li>
                         <div class="row search-wrap">
                             <div class="col s12 ">
-
                                 <div class="input-field ">
                                     <!-- <i class="material-icons prefix search-icon">search</i> -->
                                     <input type="text" placeholder="search" class="autocomplete search-field theme-text-colour">
@@ -93,11 +92,15 @@
                                 <a href="#!" class="theme-colour"><i class="material-icons">trending_up</i>report generated</a>
                             </li>
                         </ul>
-                        <!-- <a href="sass.html"><i class="material-icons">notifications</i></a> -->
                     </li>
                     <li><a href="#!"><i class="material-icons">markunread</i></a></li>
                     <li>
                         <a href="#!" data-target="settings-demo" class="sidenav-trigger show-on-medium-and-up setting-trigger"><i class="material-icons">settings</i></a>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>
+                        <a href="#!" data-target="settings-demo" class="sidenav-trigger right show-on-medium-and-down setting-trigger"><i class="material-icons">settings</i></a>
                     </li>
                 </ul>
             </div>
@@ -245,6 +248,8 @@
                             <li><a href="#breadcrumbs" callShow class="waves-effect waves-light">Breadcrumbs</a></li>
                             <li><a href="#collections" callShow class="waves-effect waves-light">Collections</a></li>
                             <li><a href="#collapsibles" callShow class="waves-effect waves-light">Collapsibles</a></li>
+                            <li><a href="#tabs" callShow class="waves-effect waves-light">Tabs</a></li>
+                            <li><a href="#navbars" callShow class="waves-effect waves-light">Navbars</a></li>
                         </ul>
                     </div>
                 </li>
@@ -1223,7 +1228,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="collection-item blue-grey">
+                    <li class="collection-item grey lighten-2">
                         <div class="row search-wrap">
                             <div class="col s9 m10 ">
                                 <div class="input-field ">
@@ -1232,7 +1237,7 @@
                             </div>
                             <div class="col s3 m2 center">
                                 <div class="input-field">
-                                    <div class="btn success">
+                                    <div class="btn theme-colour gradient">
                                         <i class="material-icons">send</i>
                                     </div>
                                 </div>
@@ -1919,6 +1924,254 @@
         </ul>
     </div>
     <!-- collapsible end -->
+    <!-- tabs start -->
+    <div id="tabs" class="paddingtop row-wrap sec">
+        <ul class="collection with-header theme-text-colour">
+            <li class="collection-header theme-colour gradient">
+                <h4>Tabs</h4>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Basic</h4>
+                        <div class="row">
+                            <div class="col s12">
+                                <ul class="tabs">
+                                    <li class="tab col s4"><a href="#basic-tab-test1" class="theme-text-colour">Test 1</a></li>
+                                    <li class="tab col s4"><a class="active theme-text-colour" href="#basic-tab-test2">Test 2</a></li>
+                                    <li class="tab col s4"><a href="#basic-tab-test3" class="theme-text-colour">Test 3</a></li>
+                                </ul>
+                            </div>
+                            <div id="basic-tab-test1" class="col s12">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis minima quis error a dolores, autem doloribus debitis sed, quasi quae fugiat illo hic.</p>
+                            </div>
+                            <div id="basic-tab-test2" class="col s12">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloremque provident esse a nostrum id accusamus sed. Perferendis sunt aut delectus, id repellat libero, ipsam rerum omnis sint voluptas hic!</p>
+                            </div>
+                            <div id="basic-tab-test3" class="col s12">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus repellendus, optio voluptatum aliquid minima molestiae obcaecati adipisci, numquam hic eos voluptatem veniam officiis quam. Totam, hic. Quibusdam voluptatesrecusandae
+                                    officia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Colour</h4>
+                        <div class="row">
+                            <div class="col s12">
+                                <ul class="tabs z-depth-1">
+                                    <li class="tab col s4"><a href="#colour-tab-test1" class="cyan white-text waves-effect waves-light">Test 1</a></li>
+                                    <li class="tab col s4"><a href="#colour-tab-test2" class="deep-purple active white-text waves-effect waves-light">Test 2</a></li>
+                                    <li class="tab col s4"><a href="#colour-tab-test3" class="pink white-text waves-effect waves-light">Test 3</a></li>
+                                </ul>
+                                <div id="colour-tab-test1" class="col s12 cyan lighten-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis minima quis error a dolores, autem doloribus debitis sed, quasi quae fugiat illo hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                        voluptatum dicta nam amet excepturi, laborum eveniet maiores, debitis voluptate magnam itaque ipsam ab. Molestiae maxime aut quibusdam animi voluptatum possimus?</p>
+                                </div>
+                                <div id="colour-tab-test2" class="col s12 deep-purple lighten-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloremque provident esse a nostrum id accusamus sed. Perferendis sunt aut delectus, id repellat libero, ipsam rerum omnis sint voluptas hic! Lorem ipsum,
+                                        dolor sit amet consectetur adipisicing elit. Dignissimos accusantium eaque officia esse, laboriosam rerum facere, omnis quas ipsa assumenda saepe. Dolorum ducimus blanditiis placeat quibusdam et, consequatur molestiae
+                                        a!
+                                    </p>
+                                </div>
+                                <div id="colour-tab-test3" class="col s12 pink lighten-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus repellendus, optio voluptatum aliquid minima molestiae obcaecati adipisci, numquam hic eos voluptatem veniam officiis quam. Totam, hic. Quibusdam
+                                        voluptatesrecusandae officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quod, placeat nam cumque pariatur ut voluptate laboriosam officiis sit velit! Culpa sequi magnam totam distinctio iusto
+                                        blanditiis eos ut doloremque.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- tabs end -->
+    <!-- navdemo start -->
+    <div id="navbars" class="paddingtop row-wrap sec">
+        <ul class="collection with-header theme-text-colour">
+            <li class="collection-header theme-colour gradient">
+                <h4>Navbars</h4>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Links Right Aligned</h4>
+                        <nav class="green">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo">Logo</a>
+                                    <ul class="right hide-on-med-and-down">
+                                        <li><a href="#!">Sass</a></li>
+                                        <li><a href="#!">Components</a></li>
+                                        <li><a href="#!">JavaScript</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Links Left Aligned</h4>
+                        <nav class="purple">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo right">Logo</a>
+                                    <ul class="left hide-on-med-and-down">
+                                        <li><a href="#!">Sass</a></li>
+                                        <li><a href="#!">Components</a></li>
+                                        <li><a href="#!">JavaScript</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Centering Logo</h4>
+                        <nav class="blue">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo center">Logo</a>
+                                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                                        <li><a href="#!">Sass</a></li>
+                                        <li><a href="#!">Components</a></li>
+                                        <li><a href="#!">JavaScript</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Fixed Navbar</h4>
+                        <p>To make the navbar fixed, you have to add an outer wrapping div with the class <span class="grey lighten-3">navbar-fixed</span>. This will offset your other content while making your nav fixed. You can adjust the height of this
+                            outer div to change how much offset is on your content.</p><br>
+                        <p>Demo : The theme top nav is fixed.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Navbar Dropdown Menu</h4>
+                        <ul id="dropdown-navdemo" class="dropdown-content">
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">three</a></li>
+                        </ul>
+                        <nav class="indigo">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo">Logo</a>
+                                    <ul class="right hide-on-med-and-down">
+                                        <li><a href="#!">Sass</a></li>
+                                        <li><a href="#!">Components</a></li>
+                                        <!-- Dropdown Trigger -->
+                                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown-navdemo">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Icon Links</h4>
+                        <nav class="deep-orange">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo">Logo</a>
+                                    <ul class="right hide-on-med-and-down">
+                                        <li><a href="#!"><i class="material-icons">search</i></a></li>
+                                        <li><a href="#!"><i class="material-icons">view_module</i></a></li>
+                                        <li><a href="#!"><i class="material-icons">refresh</i></a></li>
+                                        <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <br>
+                        <nav class="teal">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo">Logo</a>
+                                    <ul class="right hide-on-med-and-down">
+                                        <li><a href="#!"><i class="material-icons left">search</i>Link with Left Icon</a></li>
+                                        <li><a href="#!"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Centering Logo</h4>
+                        <nav class="red">
+                            <div class="nav-wrapper">
+                                <form>
+                                    <div class="input-field">
+                                        <input id="search" type="search" required>
+                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Mobile Collapse Button</h4>
+                        <nav class="purple">
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="brand-logo">Logo</a>
+                                    <a href="#" data-target="navmobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                                    <ul class="right hide-on-med-and-down">
+                                        <li><a href="#!">Sass</a></li>
+                                        <li><a href="#!">Components</a></li>
+                                        <li><a href="#!">Javascript</a></li>
+                                        <li><a href="#!">Mobile</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <ul class="sidenav" id="navmobile-demo">
+                            <li><a href="#!">Sass</a></li>
+                            <li><a href="#!">Components</a></li>
+                            <li><a href="#!">Javascript</a></li>
+                            <li><a href="#!">Mobile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- navdemo end -->
     <!-- footer start -->
     <footer class="page-footer theme-colour gradient">
         <div class="footer-copyright">

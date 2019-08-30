@@ -2,7 +2,7 @@
 > **A Materialize CSS framework based admin dashboard**
 [![Documentation Status](https://readthedocs.org/projects/materialdrawn/badge/?version=latest)](https://materialdrawn.readthedocs.io/en/latest/?badge=latest)
 
-**Material Drawn** is a free Materialize Admin with a fresh design inspired by Google's Material Design. We are very excited to introduce our material concepts through an easy to use and beautiful set of components. Material Drawn was built over the popular materialize framework and it comes with a couple of third-party plugins ( [amcharts](https://www.amcharts.com/), [datatables](https://datatables.net/) ) redesigned to fit in with the rest of the elements.
+**Material Drawn** is a free Materialize Admin with a fresh design inspired by Google's Material Design and Pixinvent theme. We are very excited to introduce our material concepts through an easy to use and beautiful set of components. Material Drawn was built over the popular materialize framework and it comes with a couple of third-party plugins ( [amcharts](https://www.amcharts.com/), [datatables](https://datatables.net/) ) redesigned to fit in with the rest of the elements.
 
   
 Material Dashboard comes with 6 color theme choices for any component as background  
