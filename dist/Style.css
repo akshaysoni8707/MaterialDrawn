@@ -21,7 +21,12 @@
 .card {
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+.card .card-action:last-child {
+    border-radius: 0 0 10px 10px;
 }
 
 .sidenav {
@@ -101,8 +106,9 @@ nav .setting-trigger {
     font-weight: 400 !important;
 }
 
-.card-image img {
+.card .card-image img {
     height: -webkit-fill-available;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .progress-text {
@@ -127,7 +133,9 @@ nav .setting-trigger {
 .collection {
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    border: none;
+    border-radius: 10px;
 }
 
 .status-card-text {
@@ -378,6 +386,97 @@ span[data-dismiss="alert"] {
     font-size: 20px !important;
 }
 
+.maildemo nav {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.mailbox-sidebar .material-icons {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.mailbox-sidebar {
+    padding-left: 0px !important;
+}
+
+.mailbox-sidebar li {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.mailbox-topbar {
+    height: 60px;
+}
+
+.mailbox-header .material-icons,
+.mailbox-content .material-icons {
+    cursor: pointer;
+}
+
+.mailbox-header-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.mailcompose-header-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.mailbox-content {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.mailbox-content ul {
+    border: none;
+    box-shadow: none;
+}
+
+.mailbox-content form {
+    font-size: 1.3em;
+}
+
+.mailbox-content .collapsible-body {
+    background-color: whitesmoke;
+}
+
+.mailbox-content .collapsible-header * {
+    vertical-align: middle;
+}
+
+.mail-user {
+    width: 50px;
+    height: 50px;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.mail-user-detail {
+    width: 100%;
+    line-height: 1.7rem;
+    margin: auto;
+    margin-left: 10px;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.mail-user-detail span.badge {
+    margin: 5px 0px;
+}
+
+.mail-user-detail .material-icons {
+    margin: 5px 5px 5px 0px;
+}
+
+.forward-mail {
+    transform: rotateY(180deg);
+}
+
 @media screen and (max-width: 600px) {
     /* styles */
     html {
@@ -386,7 +485,7 @@ span[data-dismiss="alert"] {
     .card {
         -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75)
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.75);
     }
     .paddingtop {
         padding-top: 60px !important;

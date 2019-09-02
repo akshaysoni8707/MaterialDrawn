@@ -77,6 +77,13 @@ $(document).ready(function() {
     $("span[data-dismiss='alert']").on('click', function() {
         $(this).parents('.card').hide(1000);
     });
+    $('#mail-compose').hide();
+    $('a[open-composer]').on('click', function() {
+        $('#mail-compose').show();
+    });
+    $("div[close-composer]").on('click', function() {
+        $(this).parents('#mail-compose').hide(1000);
+    });
 
     function themechanger(selectedcolour) {
         colour = mycolour[selectedcolour];

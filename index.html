@@ -2172,6 +2172,334 @@
         </ul>
     </div>
     <!-- navdemo end -->
+    <!-- mailbox start -->
+
+    <div id="mailbox" class="paddingtop row-wrap">
+        <ul class="collection with-header theme-text-colour">
+            <li class="collection-header theme-colour gradient">
+                <h4>Mail box</h4>
+            </li>
+            <li class="collection-item">
+                <div class="row theme-text-colour">
+                    <div class="col s12">
+                        <h4 class="theme-text-colour">Custom Mail Box</h4>
+                        <div class="maildemo">
+                            <nav class="blue">
+                                <div class="nav-wrapper">
+                                    <div class="left col s12 l5">
+                                        <ul>
+                                            <li><a href="#!"><i class="material-icons">menu</i></a></li>
+                                            <li class="hide-on-large-only show-on-medium-and-down right">
+                                                <a href="#!">
+                                                    <i class="material-icons">search</i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s12 l7">
+                                        <ul class="right hide-on-med-and-down">
+                                            <li><a href="#!"><i class="material-icons">search</i></a></li>
+                                            <li><a href="#!"><i class="material-icons">archive</i></a></li>
+                                            <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                            <li><a href="#!"><i class="material-icons">mail</i></a></li>
+                                            <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="col s12 no-padding">
+                                <div class="col s12 hide-on-large-only no-padding mailbox-topbar">
+                                    <div class="collection with-header">
+                                        <div class="collection-header">
+                                            <div class="row no-margin">
+                                                <div class="col">
+                                                    <a href="#!" open-composer><i class="material-icons purple-text">edit</i></a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#!"><i class="material-icons indigo-text">inbox</i></a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#!"><i class="material-icons green-text">send</i></a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#!"><i class="material-icons blue-text">description</i></a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#!"><i class="material-icons red-text">delete</i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l2 mailbox-sidebar hide-on-med-and-down">
+                                    <ul class="collection">
+                                        <li class="collection-item center hide-on-med-and-down">
+                                            <a href="#!" class="purple-text" open-composer><i class="material-icons">edit</i>Compose</a>
+                                        </li>
+                                        <li class="collection-item center hide-on-med-and-down">
+                                            <a href="#!" class="indigo-text"><i class="material-icons">inbox</i>Inbox</a>
+                                        </li>
+                                        <li class="collection-item center hide-on-med-and-down">
+                                            <a href="#!" class="green-text"><i class="material-icons">send</i>Sent</a>
+                                        </li>
+                                        <li class="collection-item center hide-on-med-and-down">
+                                            <a href="#!" class="blue-text"><i class="material-icons">description</i>Draft</a>
+                                        </li>
+                                        <li class="collection-item center hide-on-med-and-down">
+                                            <a href="#!" class="red-text"><i class="material-icons">delete</i>Trash</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col s12 m12 l10 no-padding">
+                                    <ul class="collection with-header" id="mail-compose">
+                                        <li class="collection-header mailbox-header">
+                                            <div class="mailcompose-header-item indigo-text" close-composer>
+                                                <i class="material-icons">arrow_back_ios</i>
+                                            </div>
+                                            <div class="mailcompose-header-item blue-grey-text right">
+                                                <i class="material-icons">more_vert</i>
+                                            </div>
+                                            <div class="mailcompose-header-item green-text right" close-composer>
+                                                <i class="material-icons close-composer">send</i>
+                                            </div>
+                                            <div class="mailcompose-header-item orange-text right">
+                                                <i class="material-icons">attachment</i>
+                                            </div>
+                                        </li>
+                                        <li class="collection-item mailbox-content">
+                                            <div class="row">
+                                                <form class="col s12">
+                                                    <div class="row">
+                                                        <div class="input-field col s12 no-margin">
+                                                            <input id="mailto" type="email" class="validate">
+                                                            <label for="mailto">To</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <input id="mailsubject" type="text" class="validate">
+                                                            <label for="mailsubject">Subject</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <textarea id="mailbody" class="materialize-textarea"></textarea>
+                                                            <label for="mailbody">mail</label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="collection with-header">
+                                        <li class="collection-header mailbox-header">
+                                            <div class="mailbox-header-item">
+                                                <label for="mailcheck">
+                                                <input type="checkbox" id="mailcheck">
+                                                <span></span>
+                                            </label>
+                                            </div>
+                                            <div class="mailbox-header-item green-text">
+                                                <i class="material-icons">refresh</i>
+                                            </div>
+                                            <div class="mailbox-header-item orange-text">
+                                                <i class="material-icons">star_border</i>
+                                            </div>
+                                            <div class="mailbox-header-item blue-text">
+                                                <i class="material-icons">label_outline</i>
+                                            </div>
+                                            <div class="mailbox-header-item blue-text right hide-on-small-and-down">
+                                                <span class="badge info">5 new</span>
+                                            </div>
+                                        </li>
+                                        <li class="collection-item mailbox-content">
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header">
+                                                        <img src="https://images.unsplash.com/photo-1517957754642-2870518e16f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" alt="" class="circle left mail-user">
+                                                        <p class="mail-user-detail">
+                                                            John Doe
+                                                            <span class="badge danger white-text right hide-on-small-and-down">Note</span>
+                                                            <i class="material-icons right">attachment</i>
+                                                        </p>
+                                                    </div>
+                                                    <div class="collapsible-body black-text darken-2">
+                                                        <div class="row no-margin">
+                                                            <span class="right">
+                                                                    <i class="material-icons blue-text">reply</i>
+                                                                    <i class="material-icons blue-grey-text">more_vert</i>
+                                                            </span>
+                                                        </div>
+                                                        <p>
+                                                            Hi John,
+                                                        </p>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore ullam placeat minima laborum iusto officiis temporibus vero adipisci debitis, repudiandae eligendi, corrupti deleniti laudantium aperiam, delectus unde quae! Vel. Lorem ipsum dolor sit
+                                                            amet consectetur adipisicing elit. Iure accusamus maiores, delectus architecto obcaecati explicabo fugiat rerum consequuntur aliquam, voluptatum tenetur tempore? Tempore consequatur tenetur id
+                                                            assumenda libero dolore quo?
+                                                        </p>
+                                                        <p>
+                                                            Your thankful,<br>XYZ
+                                                        </p>
+                                                        <div class="row no-margin">
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons">reply</i></a>
+                                                                <p class="ultra-small no-margin">Reply</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons green-text">reply_all</i></a>
+                                                                <p class="ultra-small no-margin">Reply All</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons indigo-text forward-mail">reply</i></a>
+                                                                <p class="ultra-small no-margin">Forward</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="collapsible-header">
+                                                        <img src="https://images.unsplash.com/photo-1486578077620-8a022ddd481f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" alt="" class="circle left mail-user">
+                                                        <p class="mail-user-detail">
+                                                            Sumit more
+                                                            <span class="badge success white-text right hide-on-small-and-down">Pay</span>
+                                                            <i class="material-icons right">attachment</i>
+                                                        </p>
+                                                    </div>
+                                                    <div class="collapsible-body black-text darken-2">
+                                                        <div class="row no-margin">
+                                                            <span class="right">
+                                                                        <i class="material-icons blue-text">reply</i>
+                                                                        <i class="material-icons blue-grey-text">more_vert</i>
+                                                                </span>
+                                                        </div>
+                                                        <p>
+                                                            Hi John,
+                                                        </p>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore ullam placeat minima laborum iusto officiis temporibus vero adipisci debitis, repudiandae eligendi, corrupti deleniti laudantium aperiam, delectus unde quae! Vel. Lorem ipsum dolor sit
+                                                            amet consectetur adipisicing elit. Iure accusamus maiores, delectus architecto obcaecati explicabo fugiat rerum consequuntur aliquam, voluptatum tenetur tempore? Tempore consequatur tenetur id
+                                                            assumenda libero dolore quo?
+                                                        </p>
+                                                        <p>
+                                                            Your thankful,<br>XYZ
+                                                        </p>
+                                                        <div class="row no-margin">
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons">reply</i></a>
+                                                                <p class="ultra-small no-margin">Reply</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons green-text">reply_all</i></a>
+                                                                <p class="ultra-small no-margin">Reply All</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons indigo-text forward-mail">reply</i></a>
+                                                                <p class="ultra-small no-margin">Forward</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="collapsible-header">
+                                                        <img src="https://images.unsplash.com/flagged/photo-1558727557-b08539c5683f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" alt="" class="circle left mail-user">
+                                                        <p class="mail-user-detail">
+                                                            Akshay Soni
+                                                            <span class="badge info white-text right hide-on-small-and-down">Bill</span>
+                                                            <i class="material-icons right">attachment</i>
+                                                        </p>
+                                                    </div>
+                                                    <div class="collapsible-body black-text darken-2">
+                                                        <div class="row no-margin">
+                                                            <span class="right">
+                                                                        <i class="material-icons blue-text">reply</i>
+                                                                        <i class="material-icons blue-grey-text">more_vert</i>
+                                                                </span>
+                                                        </div>
+                                                        <p>
+                                                            Hi John,
+                                                        </p>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore ullam placeat minima laborum iusto officiis temporibus vero adipisci debitis, repudiandae eligendi, corrupti deleniti laudantium aperiam, delectus unde quae! Vel. Lorem ipsum dolor sit
+                                                            amet consectetur adipisicing elit. Iure accusamus maiores, delectus architecto obcaecati explicabo fugiat rerum consequuntur aliquam, voluptatum tenetur tempore? Tempore consequatur tenetur id
+                                                            assumenda libero dolore quo?
+                                                        </p>
+                                                        <p>
+                                                            Your thankful,<br>XYZ
+                                                        </p>
+                                                        <div class="row no-margin">
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons">reply</i></a>
+                                                                <p class="ultra-small no-margin">Reply</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons green-text">reply_all</i></a>
+                                                                <p class="ultra-small no-margin">Reply All</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons indigo-text forward-mail">reply</i></a>
+                                                                <p class="ultra-small no-margin">Forward</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="collapsible-header">
+                                                        <img src="https://images.unsplash.com/photo-1517957754642-2870518e16f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" alt="" class="circle left mail-user">
+                                                        <p class="mail-user-detail">
+                                                            John Doe
+                                                            <span class="badge danger white-text right hide-on-small-and-down">Note</span>
+                                                            <i class="material-icons right">attachment</i>
+                                                        </p>
+                                                    </div>
+                                                    <div class="collapsible-body black-text darken-2">
+                                                        <div class="row no-margin">
+                                                            <span class="right">
+                                                                        <i class="material-icons blue-text">reply</i>
+                                                                        <i class="material-icons blue-grey-text">more_vert</i>
+                                                                </span>
+                                                        </div>
+                                                        <p>
+                                                            Hi John,
+                                                        </p>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore ullam placeat minima laborum iusto officiis temporibus vero adipisci debitis, repudiandae eligendi, corrupti deleniti laudantium aperiam, delectus unde quae! Vel. Lorem ipsum dolor sit
+                                                            amet consectetur adipisicing elit. Iure accusamus maiores, delectus architecto obcaecati explicabo fugiat rerum consequuntur aliquam, voluptatum tenetur tempore? Tempore consequatur tenetur id
+                                                            assumenda libero dolore quo?
+                                                        </p>
+                                                        <p>
+                                                            Your thankful,<br>XYZ
+                                                        </p>
+                                                        <div class="row no-margin">
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons">reply</i></a>
+                                                                <p class="ultra-small no-margin">Reply</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons green-text">reply_all</i></a>
+                                                                <p class="ultra-small no-margin">Reply All</p>
+                                                            </div>
+                                                            <div class="col s4 center-align">
+                                                                <a href="!#"><i class="material-icons indigo-text forward-mail">reply</i></a>
+                                                                <p class="ultra-small no-margin">Forward</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- mailbox end -->
     <!-- footer start -->
     <footer class="page-footer theme-colour gradient">
         <div class="footer-copyright">
