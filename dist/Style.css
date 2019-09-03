@@ -237,6 +237,12 @@ nav .btn-large:hover {
     background-color: transparent;
 }
 
+.sidenav li>a>i,
+.sidenav li>a>i.material-icons {
+    margin: 0px 20px 0px 0px;
+    color: white;
+}
+
 .sidenav li.active {
     background-color: rgba(0, 0, 0, .6);
 }
