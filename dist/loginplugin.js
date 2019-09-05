@@ -1,22 +1,22 @@
 var mycolour = {};
-mycolour['forestgreen'] = '#003300';
-mycolour['lightforestgreen'] = '#66b266';
-mycolour['midnightblue'] = '#191970';
-mycolour['lightmidnightblue'] = '#6464DC';
+mycolour['forestgreen'] = '#233329';
+mycolour['lightforestgreen'] = '#63D471';
+mycolour['midnightblue'] = '#021B79';
+mycolour['lightmidnightblue'] = '#0575E6';
 mycolour['tealish'] = '#006D5B';
 mycolour['lighttealish'] = '#00C9A8';
-mycolour['blood'] = '#800020';
-mycolour['lightblood'] = '#FF668D';
-mycolour['girl'] = '#FF033E';
-mycolour['lightgirl'] = '#FF5F84';
-mycolour['lavender'] = '#2e0b34';
-mycolour['lightlavender'] = '#b967c7';
+mycolour['blood'] = '#33001b';
+mycolour['lightblood'] = '#ff0084';
+mycolour['girl'] = '#861657';
+mycolour['lightgirl'] = '#FFA69E';
+mycolour['lavender'] = '#2a0845';
+mycolour['lightlavender'] = '#6441A5';
 var mybg = {};
 mybg['forestgreen'] = 'https://images.unsplash.com/photo-1473081556163-2a17de81fc97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 mybg['midnightblue'] = 'https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 mybg['tealish'] = 'https://images.unsplash.com/photo-1501408459713-977c880160ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 mybg['blood'] = 'https://images.unsplash.com/photo-1520624598504-ed830bd895d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
-mybg['girl'] = 'https://images.unsplash.com/photo-1503455637927-730bce8583c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
+mybg['girl'] = 'https://images.unsplash.com/photo-1520052205864-92d242b3a76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60';
 mybg['lavender'] = 'https://images.unsplash.com/photo-1477093782505-e10aaeb27c6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60';
 $(document).ready(function() {
     var backup = $('.dynamic-call').html();
@@ -64,7 +64,8 @@ $(document).ready(function() {
             'color': 'white'
         });
         $('.theme-colour.gradient').css({
-            'background': '-webkit-linear-gradient(bottom, ' + colour + ' 0%, ' + lightcolour + ' 100%)',
+            //            'background': '-webkit-linear-gradient(bottom, ' + colour + ' 0%, ' + lightcolour + ' 100%)',
+            'background': '-webkit-linear-gradient(40deg,' + colour + ',' + lightcolour + ')',
             'color': 'white'
         });
         $('.theme-colour.light-colour').css({
